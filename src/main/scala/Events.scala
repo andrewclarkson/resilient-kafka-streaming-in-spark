@@ -1,8 +1,9 @@
+import scala.collection.immutable.Map
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka._
 import org.apache.spark.SparkConf
 
-class Events {
+object Events {
   def createContext(): StreamingContext = {
     val sparkConf = new SparkConf().set("spark.streaming.receiver.writeAheadLog.enable", "true")
                                    .setAppName("Events")
