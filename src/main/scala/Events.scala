@@ -1,18 +1,26 @@
 import scala.collection.immutable.Map
+import kafka.serializer.StringDecoder
 import org.apache.spark.streaming._
 import org.apache.spark.streaming.kafka._
 import org.apache.spark.SparkConf
 
 object Events {
   def createContext(): StreamingContext = {
-    val sparkConf = new SparkConf().set("spark.streaming.receiver.writeAheadLog.enable", "true")
-                                   .setAppName("Events")
+    val sparkConf = new SparkConf()//.set("spark.streaming.receiver.writeAheadLog.enable", "true")
+      .set("spark.task.maxFailures", "200")
+      .setAppName("Events")
 
     val ssc = new StreamingContext(sparkConf, Seconds(1))
     
-    val messages = KafkaUtils.createStream(ssc, "localhost", "Events", Map("events" -> 1)).map(_._2)
-    
-    ssc.checkpoint("/tmp")
+    val params = Map(
+      "metadata.broker.list" -> "localhost:9092",
+      "auto.offset.reset" -> "smallest"
+    )
+
+    val topics = Set("events")
+
+    val messages = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](
+      ssc, params, topics).map(_._2)    
 
     /* for each mini-batch in the stream*/
     messages.foreachRDD({ rdd =>
@@ -27,6 +35,7 @@ object Events {
       })
     })
     
+    ssc.checkpoint("/tmp")
     ssc
   }
 
