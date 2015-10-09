@@ -1,0 +1,182 @@
+log4j:WARN No appenders could be found for logger (org.apache.hadoop.metrics2.lib.MutableMetricsFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+15/10/08 20:49:14 INFO CheckpointReader: Checkpoint files found: file:/tmp/checkpoint-1444355315000,file:/tmp/checkpoint-1444355315000.bk,file:/tmp/checkpoint-1444355314000,file:/tmp/checkpoint-1444355314000.bk,file:/tmp/checkpoint-1444355313000,file:/tmp/checkpoint-1444355313000.bk,file:/tmp/checkpoint-1444355312000,file:/tmp/checkpoint-1444355312000.bk,file:/tmp/checkpoint-1444355311000,file:/tmp/checkpoint-1444355311000.bk
+15/10/08 20:49:14 INFO CheckpointReader: Attempting to load checkpoint from file file:/tmp/checkpoint-1444355315000
+15/10/08 20:49:14 INFO Checkpoint: Checkpoint for time 1444355315000 ms validated
+15/10/08 20:49:14 INFO CheckpointReader: Checkpoint successfully loaded from file file:/tmp/checkpoint-1444355315000
+15/10/08 20:49:14 INFO CheckpointReader: Checkpoint was generated at time 1444355315000 ms
+15/10/08 20:49:14 INFO SparkContext: Running Spark version 1.5.1
+15/10/08 20:49:14 INFO SecurityManager: Changing view acls to: andrewclarkson
+15/10/08 20:49:14 INFO SecurityManager: Changing modify acls to: andrewclarkson
+15/10/08 20:49:14 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(andrewclarkson); users with modify permissions: Set(andrewclarkson)
+15/10/08 20:49:15 INFO Slf4jLogger: Slf4jLogger started
+15/10/08 20:49:15 INFO Remoting: Starting remoting
+15/10/08 20:49:15 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkDriver@192.168.1.3:56205]
+15/10/08 20:49:15 INFO Utils: Successfully started service 'sparkDriver' on port 56205.
+15/10/08 20:49:15 INFO SparkEnv: Registering MapOutputTracker
+15/10/08 20:49:15 INFO SparkEnv: Registering BlockManagerMaster
+15/10/08 20:49:15 INFO DiskBlockManager: Created local directory at /private/var/folders/q_/19cvvfns3qj0zgz98w1q0yqw0000gn/T/blockmgr-b98c3ac1-606d-4764-96c3-a7cea2c91ced
+15/10/08 20:49:15 INFO MemoryStore: MemoryStore started with capacity 530.0 MB
+15/10/08 20:49:15 INFO HttpFileServer: HTTP File server directory is /private/var/folders/q_/19cvvfns3qj0zgz98w1q0yqw0000gn/T/spark-94ad7cd4-a94c-42ce-8688-868cd4695e67/httpd-035f3464-b7c1-4ff4-98ae-a162626bdab3
+15/10/08 20:49:15 INFO HttpServer: Starting HTTP Server
+15/10/08 20:49:15 INFO Utils: Successfully started service 'HTTP file server' on port 56206.
+15/10/08 20:49:15 INFO SparkEnv: Registering OutputCommitCoordinator
+15/10/08 20:49:15 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+15/10/08 20:49:15 INFO SparkUI: Started SparkUI at http://192.168.1.3:4040
+15/10/08 20:49:15 INFO SparkContext: Added JAR file:/Users/andrewclarkson/code/resilient-kafka-streaming-in-spark/target/scala-2.10/events-assembly-1.0.jar at http://192.168.1.3:56206/jars/events-assembly-1.0.jar with timestamp 1444355355859
+15/10/08 20:49:15 INFO Executor: Starting executor ID driver on host localhost
+15/10/08 20:49:15 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 56207.
+15/10/08 20:49:15 INFO NettyBlockTransferService: Server created on 56207
+15/10/08 20:49:15 INFO BlockManagerMaster: Trying to register BlockManager
+15/10/08 20:49:15 INFO BlockManagerMasterEndpoint: Registering block manager localhost:56207 with 530.0 MB RAM, BlockManagerId(driver, localhost, 56207)
+15/10/08 20:49:16 INFO BlockManagerMaster: Registered BlockManager
+15/10/08 20:49:16 INFO ForEachDStream: Set context for org.apache.spark.streaming.dstream.ForEachDStream@57d0fc89
+15/10/08 20:49:16 INFO MappedDStream: Set context for org.apache.spark.streaming.dstream.MappedDStream@6fc3e1a4
+15/10/08 20:49:16 INFO DirectKafkaInputDStream: Set context for org.apache.spark.streaming.kafka.DirectKafkaInputDStream@3fa76c61
+15/10/08 20:49:16 INFO DStreamGraph: Restoring checkpoint data
+15/10/08 20:49:16 INFO ForEachDStream: Restoring checkpoint data
+15/10/08 20:49:16 INFO MappedDStream: Restoring checkpoint data
+15/10/08 20:49:16 INFO DirectKafkaInputDStream: Restoring checkpoint data
+15/10/08 20:49:16 INFO VerifiableProperties: Verifying properties
+15/10/08 20:49:16 INFO VerifiableProperties: Property auto.offset.reset is overridden to smallest
+15/10/08 20:49:16 INFO VerifiableProperties: Property group.id is overridden to 
+15/10/08 20:49:16 INFO VerifiableProperties: Property zookeeper.connect is overridden to 
+15/10/08 20:49:16 INFO DirectKafkaInputDStream$DirectKafkaInputDStreamCheckpointData: Restoring KafkaRDD for time 1444355315000 ms [(events,0,371,371)]
+15/10/08 20:49:16 INFO DirectKafkaInputDStream: Restored checkpoint data
+15/10/08 20:49:16 INFO MappedDStream: Restored checkpoint data
+15/10/08 20:49:16 INFO ForEachDStream: Restored checkpoint data
+15/10/08 20:49:16 INFO DStreamGraph: Restored checkpoint data
+15/10/08 20:49:16 INFO WriteAheadLogManager : Recovered 1 write ahead log files from file:/tmp/receivedBlockMetadata
+15/10/08 20:49:16 INFO ReceivedBlockTracker: Recovering from write ahead logs in file:/tmp
+15/10/08 20:49:16 INFO WriteAheadLogManager : Reading from the logs: file:/tmp/receivedBlockMetadata/log-1444355268019-1444355328019
+15/10/08 20:49:16 INFO JobGenerator: Batches during down time (42 batches): 1444355315000 ms, 1444355316000 ms, 1444355317000 ms, 1444355318000 ms, 1444355319000 ms, 1444355320000 ms, 1444355321000 ms, 1444355322000 ms, 1444355323000 ms, 1444355324000 ms, 1444355325000 ms, 1444355326000 ms, 1444355327000 ms, 1444355328000 ms, 1444355329000 ms, 1444355330000 ms, 1444355331000 ms, 1444355332000 ms, 1444355333000 ms, 1444355334000 ms, 1444355335000 ms, 1444355336000 ms, 1444355337000 ms, 1444355338000 ms, 1444355339000 ms, 1444355340000 ms, 1444355341000 ms, 1444355342000 ms, 1444355343000 ms, 1444355344000 ms, 1444355345000 ms, 1444355346000 ms, 1444355347000 ms, 1444355348000 ms, 1444355349000 ms, 1444355350000 ms, 1444355351000 ms, 1444355352000 ms, 1444355353000 ms, 1444355354000 ms, 1444355355000 ms, 1444355356000 ms
+15/10/08 20:49:16 INFO JobGenerator: Batches pending processing (0 batches): 
+15/10/08 20:49:16 INFO JobGenerator: Batches to reschedule (42 batches): 1444355315000 ms, 1444355316000 ms, 1444355317000 ms, 1444355318000 ms, 1444355319000 ms, 1444355320000 ms, 1444355321000 ms, 1444355322000 ms, 1444355323000 ms, 1444355324000 ms, 1444355325000 ms, 1444355326000 ms, 1444355327000 ms, 1444355328000 ms, 1444355329000 ms, 1444355330000 ms, 1444355331000 ms, 1444355332000 ms, 1444355333000 ms, 1444355334000 ms, 1444355335000 ms, 1444355336000 ms, 1444355337000 ms, 1444355338000 ms, 1444355339000 ms, 1444355340000 ms, 1444355341000 ms, 1444355342000 ms, 1444355343000 ms, 1444355344000 ms, 1444355345000 ms, 1444355346000 ms, 1444355347000 ms, 1444355348000 ms, 1444355349000 ms, 1444355350000 ms, 1444355351000 ms, 1444355352000 ms, 1444355353000 ms, 1444355354000 ms, 1444355355000 ms, 1444355356000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355315000 ms
+15/10/08 20:49:16 INFO JobScheduler: Starting job streaming job 1444355315000 ms.0 from job set of time 1444355315000 ms
+15/10/08 20:49:16 INFO SparkContext: Starting job: foreachRDD at Events.scala:26
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355316000 ms
+15/10/08 20:49:16 INFO DAGScheduler: Got job 0 (foreachRDD at Events.scala:26) with 1 output partitions
+15/10/08 20:49:16 INFO DAGScheduler: Final stage: ResultStage 0(foreachRDD at Events.scala:26)
+15/10/08 20:49:16 INFO DAGScheduler: Parents of final stage: List()
+15/10/08 20:49:16 INFO DAGScheduler: Missing parents: List()
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355317000 ms
+15/10/08 20:49:16 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[1] at map at Events.scala:23), which has no missing parents
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355318000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355319000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355320000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355321000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355322000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355323000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355324000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355325000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355326000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355327000 ms
+15/10/08 20:49:16 INFO MemoryStore: ensureFreeSpace(2920) called with curMem=0, maxMem=555755765
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355328000 ms
+15/10/08 20:49:16 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 2.9 KB, free 530.0 MB)
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355329000 ms
+15/10/08 20:49:16 INFO MemoryStore: ensureFreeSpace(1680) called with curMem=2920, maxMem=555755765
+15/10/08 20:49:16 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 1680.0 B, free 530.0 MB)
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355330000 ms
+15/10/08 20:49:16 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on localhost:56207 (size: 1680.0 B, free: 530.0 MB)
+15/10/08 20:49:16 INFO SparkContext: Created broadcast 0 from broadcast at DAGScheduler.scala:861
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355331000 ms
+15/10/08 20:49:16 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[1] at map at Events.scala:23)
+15/10/08 20:49:16 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355332000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355333000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355334000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355335000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355336000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355337000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355338000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355339000 ms
+15/10/08 20:49:16 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, ANY, 2081 bytes)
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355340000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355341000 ms
+15/10/08 20:49:16 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355342000 ms
+15/10/08 20:49:16 INFO Executor: Fetching http://192.168.1.3:56206/jars/events-assembly-1.0.jar with timestamp 1444355355859
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355343000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355344000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355345000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355346000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355347000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355348000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355349000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355350000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355351000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355352000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355353000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355354000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355355000 ms
+15/10/08 20:49:16 INFO JobScheduler: Added jobs for time 1444355356000 ms
+15/10/08 20:49:16 INFO RecurringTimer: Started timer for JobGenerator at time 1444355357000
+15/10/08 20:49:16 INFO JobGenerator: Restarted JobGenerator at 1444355357000 ms
+15/10/08 20:49:16 INFO JobScheduler: Started JobScheduler
+15/10/08 20:49:16 INFO StreamingContext: StreamingContext started
+15/10/08 20:49:16 INFO Utils: Fetching http://192.168.1.3:56206/jars/events-assembly-1.0.jar to /private/var/folders/q_/19cvvfns3qj0zgz98w1q0yqw0000gn/T/spark-94ad7cd4-a94c-42ce-8688-868cd4695e67/userFiles-9794733a-3a82-46b6-9a4a-f47d2a22197c/fetchFileTemp1239830257806882132.tmp
+15/10/08 20:49:16 INFO Executor: Adding file:/private/var/folders/q_/19cvvfns3qj0zgz98w1q0yqw0000gn/T/spark-94ad7cd4-a94c-42ce-8688-868cd4695e67/userFiles-9794733a-3a82-46b6-9a4a-f47d2a22197c/events-assembly-1.0.jar to class loader
+15/10/08 20:49:16 INFO KafkaRDD: Beginning offset 371 is the same as ending offset skipping events 0
+15/10/08 20:49:16 INFO StreamingContext: Invoking stop(stopGracefully=false) from shutdown hook
+15/10/08 20:49:16 INFO JobGenerator: Stopping JobGenerator immediately
+15/10/08 20:49:16 INFO RecurringTimer: Stopped timer for JobGenerator after time -1
+15/10/08 20:49:16 INFO CheckpointWriter: CheckpointWriter executor terminated ? true, waited for 0 ms.
+15/10/08 20:49:16 INFO JobGenerator: Stopped JobGenerator
+Exception in thread "streaming-job-executor-0" java.lang.Error: java.lang.InterruptedException
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1148)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.InterruptedException
+	at java.lang.Object.wait(Native Method)
+	at java.lang.Object.wait(Object.java:502)
+	at org.apache.spark.scheduler.JobWaiter.awaitResult(JobWaiter.scala:73)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:559)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1822)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1835)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1848)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1919)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1.apply(RDD.scala:898)
+	at org.apache.spark.rdd.RDD$$anonfun$foreachPartition$1.apply(RDD.scala:896)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:147)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:108)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:306)
+	at org.apache.spark.rdd.RDD.foreachPartition(RDD.scala:896)
+	at Events$$anonfun$createContext$1.apply(Events.scala:28)
+	at Events$$anonfun$createContext$1.apply(Events.scala:26)
+	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:631)
+	at org.apache.spark.streaming.dstream.DStream$$anonfun$foreachRDD$1$$anonfun$apply$mcV$sp$3.apply(DStream.scala:631)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(ForEachDStream.scala:42)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:40)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1$$anonfun$apply$mcV$sp$1.apply(ForEachDStream.scala:40)
+	at org.apache.spark.streaming.dstream.DStream.createRDDWithLocalProperties(DStream.scala:399)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply$mcV$sp(ForEachDStream.scala:40)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:40)
+	at org.apache.spark.streaming.dstream.ForEachDStream$$anonfun$1.apply(ForEachDStream.scala:40)
+	at scala.util.Try$.apply(Try.scala:161)
+	at org.apache.spark.streaming.scheduler.Job.run(Job.scala:34)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply$mcV$sp(JobScheduler.scala:218)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:218)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler$$anonfun$run$1.apply(JobScheduler.scala:218)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:57)
+	at org.apache.spark.streaming.scheduler.JobScheduler$JobHandler.run(JobScheduler.scala:217)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	... 2 more
+15/10/08 20:49:18 INFO JobScheduler: Stopped JobScheduler
+15/10/08 20:49:18 INFO StreamingContext: StreamingContext stopped successfully
+15/10/08 20:49:18 INFO SparkContext: Invoking stop() from shutdown hook
+15/10/08 20:49:18 INFO SparkUI: Stopped Spark web UI at http://192.168.1.3:4040
+15/10/08 20:49:18 INFO DAGScheduler: Stopping DAGScheduler
+15/10/08 20:49:18 INFO DAGScheduler: ResultStage 0 (foreachRDD at Events.scala:26) failed in 2.367 s
+15/10/08 20:49:19 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+15/10/08 20:49:19 INFO MemoryStore: MemoryStore cleared
+15/10/08 20:49:19 INFO BlockManager: BlockManager stopped
+15/10/08 20:49:19 INFO BlockManagerMaster: BlockManagerMaster stopped
+15/10/08 20:49:19 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+15/10/08 20:49:19 INFO SparkContext: Successfully stopped SparkContext
+15/10/08 20:49:19 INFO ShutdownHookManager: Shutdown hook called
+15/10/08 20:49:19 INFO ShutdownHookManager: Deleting directory /private/var/folders/q_/19cvvfns3qj0zgz98w1q0yqw0000gn/T/spark-94ad7cd4-a94c-42ce-8688-868cd4695e67
+15/10/08 20:49:19 INFO RemoteActorRefProvider$RemotingTerminator: Shutting down remote daemon.

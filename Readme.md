@@ -1,4 +1,10 @@
+Resilient kafka streaming in Spark:
+===================================
+
+A simple demo that should eventually provide "at least once" event processing
+
 Setup:
+------
 
 Assumes you already have java, scala, and sbt installed
 
@@ -51,7 +57,7 @@ cp zookeeper-3.4.6/conf/zoo_sample.cfg zookeeper-3.4.6/conf/zoo.cfg
 ./spark-1.5.1-bin-hadoop2.6/bin/spark-submit --class Events target/scala-2.11/events-assembly-1.0.jar 2> spark.out
 ```
 
-Now if you type a letter and hit enter on terminal running the producer, it should show up in the terminal running the application.
+Now if you type a letter and hit enter on terminal running the producer, it _should_ show up in the terminal running the application.
 
 Try typing a bunch of letters, every single one should get through regardless of the spark application failing--which should occur approximately 50% of the time.
 
